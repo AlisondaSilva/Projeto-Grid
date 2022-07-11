@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Fontes*/
+    --ff-heading: 'Epilogue', sans-serif;
+    --ff-texting: 'Open sans', sans-serif;
+    --fs-body:1.6rem;
+    --fs-heading:4.0rem;
+    
+    /*Cores*/
+    --hue: 250;
+    --bg-primary: hsl(var(--hue), 22%, 20%);
+    --fc-primary: hsl(var(--hue), 0%, 100%);
+    --fc-secondary: hsl(var(--hue), 50%, 80%);
+  }
+  
+  body {
+    font-family: var(--ff-texting);
+  
+    background-color: var(--bg-primary);
+    color: var(--fc-primary);
+  }
+  
+  /*Caixa do cabeçalho*/
+  header {
+    margin: 10rem 0 8rem;
+    font-family: var(--ff-heading);
+    text-align: center;
+  }
+
+/*Primeiro elemento*/
+  header p {
+    color: var(--fc-secondary);
+    text-transform: uppercase;
+    font-size: var(--fs-body);
+    font-weight: 400;
+    
+    line-height: 3.2rem;
+    letter-spacing: 3px;
+
+    margin-bottom: 1.7rem;
+  }
+
+/*Segundo elemento*/
+  header h1 {
+    font-weight: 800;
+    line-height: 4.8rem;
+    font-size: var(--fs-heading);
+  }
+
+/*----------- Fim cabeçalho ---------*/
+
+/*----------- Main ------------------*/
+
+.pag { /*Tamanho e posicionamento*/
+    max-width: 33rem;
+    margin: 0 auto;
+}
+
+img {
+    /*Contemos a imagem dentro da caixa*/
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    /*Deixamos a posição relativas para os itens contido neste container*/
+    position: relative;
+}
+
+.card img {
+    height: 41.6rem;
+    /*É uma forma de posiciona a imagem dentro da caixa ao meche no tamanho do container*/
+    object-fit: cover;
+}
+
+.card h2 {
+    /*Posicionamento sobre o container*/
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
+}
