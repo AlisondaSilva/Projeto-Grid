@@ -1,86 +1,137 @@
 * {
-    margin: 0;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 :root {
-    /*Fontes*/
-    --ff-heading: 'Epilogue', sans-serif;
-    --ff-texting: 'Open sans', sans-serif;
-    --fs-body:1.6rem;
-    --fs-heading:4.0rem;
-    
-    /*Cores*/
-    --hue: 250;
-    --bg-primary: hsl(var(--hue), 22%, 20%);
-    --fc-primary: hsl(var(--hue), 0%, 100%);
-    --fc-secondary: hsl(var(--hue), 50%, 80%);
-  }
+  /*Fontes*/
+  --ff-heading: 'Epilogue', sans-serif;
+  --ff-texting: 'Open sans', sans-serif;
+  --fs-body:1.6rem;
+  --fs-heading:4.0rem;
   
-  body {
-    font-family: var(--ff-texting);
-  
-    background-color: var(--bg-primary);
-    color: var(--fc-primary);
-  }
-  
-  /*Caixa do cabeçalho*/
-  header {
-    margin: 10rem 0 8rem;
-    font-family: var(--ff-heading);
-    text-align: center;
-  }
+  /*Cores*/
+  --hue: 250;
+  --bg-primary: hsl(var(--hue), 22%, 20%);
+  --fc-primary: hsl(var(--hue), 0%, 100%);
+  --fc-secondary: hsl(var(--hue), 50%, 80%);
+  --fc-secondary-dark: hsl(var(--hue), 100%, 11%, 1%);
+
+  /*Calciço para numero floats*/
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--ff-texting);
+
+  background-color: var(--bg-primary);
+  color: var(--fc-primary);
+}
+
+/*Caixa do cabeçalho*/
+header {
+  margin: 10rem 0 8rem;
+  font-family: var(--ff-heading);
+  text-align: center;
+}
 
 /*Primeiro elemento*/
-  header p {
-    color: var(--fc-secondary);
-    text-transform: uppercase;
-    font-size: var(--fs-body);
-    font-weight: 400;
-    
-    line-height: 3.2rem;
-    letter-spacing: 3px;
+header p {
+  color: var(--fc-secondary);
+  text-transform: uppercase;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  
+  line-height: 3.2rem;
+  letter-spacing: 3px;
 
-    margin-bottom: 1.7rem;
-  }
+  margin-bottom: 1.7rem;
+}
 
 /*Segundo elemento*/
-  header h1 {
-    font-weight: 800;
-    line-height: 4.8rem;
-    font-size: var(--fs-heading);
-  }
+header h1 {
+  font-weight: 800;
+  line-height: 4.8rem;
+  font-size: var(--fs-heading);
+}
 
+/*Espaçamentos das caixas*/
+main {
+display: grid;
+gap: 3.2rem;
+}
 /*----------- Fim cabeçalho ---------*/
 
 /*----------- Main ------------------*/
 
 .pag { /*Tamanho e posicionamento*/
-    max-width: 33rem;
-    margin: 0 auto;
+  max-width: 33.3rem;
+  margin: 0 auto;
 }
 
 img {
-    /*Contemos a imagem dentro da caixa*/
-    width: 100%;
-    height: auto;
+  /*Contemos a imagem dentro da caixa*/
+  width: 100%;
+  height: auto;
 }
 
 .card {
-    /*Deixamos a posição relativas para os itens contido neste container*/
-    position: relative;
+  /*Deixamos a posição relativas para os itens contido neste container*/
+  position: relative;
+
+  font-family: var(--ff-heading);
 }
 
+/*A imagem ocupada toda caixa em se*/
 .card img {
-    height: 41.6rem;
-    /*É uma forma de posiciona a imagem dentro da caixa ao meche no tamanho do container*/
-    object-fit: cover;
+  height: 41.6rem;
+  /*É uma forma de posiciona a imagem dentro da caixa ao meche no tamanho do container*/
+  object-fit: cover;
+  border-radius: 6px;
+
+  /*Tempo de transição do aumento da escala da imagem*/
+  transition: all 300ms;
+}
+
+/*Ao passar o mouse no Card*/
+.card img:hover {
+/*Aquie ele aumenta a escala da imagem em 10% do tamanho original, sendo escala 1 100%*/
+transform: scale(1.1);
+opacity: 0.5;
+
 }
 
 .card h2 {
-    /*Posicionamento sobre o container*/
-    position: absolute;
-    bottom: 5.2rem;
-    left: 2.8rem;
+  /*Posicionamento sobre o container*/
+  position: absolute;
+  bottom: 5.2rem;
+  left: 2.8rem;
+
+  font-size: var(--fs-heading);
+  font-weight: 800;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+
 }
+
+/*Bloquinho do Card*/
+.card h2 span {
+
+color: black;
+border-radius: 2rem;
+background-color: var(--fc-primary);
+font-size: var(--fs-body);
+font-weight: 400;
+
+padding: 0 1.6rem;
+width: fit-content; /*Isso contem o conteúdo na caixa*/
+height: 3.8rem;
+
+display: flex;
+align-items: center;
+
+}
+
